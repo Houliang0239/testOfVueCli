@@ -2,7 +2,10 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> | 
+      <router-link to='/drainage'>Drainage</router-link> |
+      <router-link to='/Axios_mock'>Axios_mock</router-link> |
+      <router-link to='/FatherComponent'>component</router-link>
     </div>
     <router-view/>
   </div>

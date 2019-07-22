@@ -5,7 +5,7 @@ import store from './store';
 import './registerServiceWorker';
 
 Vue.config.productionTip = false;
-
+require('./mock.js')
 new Vue({
   router,
   store,
