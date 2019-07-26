@@ -1,7 +1,10 @@
 <template>
   <div>
     <button>{{fatherMsg}}</button>
-    <PersonComponent :fatherMsg="fatherMsg" :fatherNumber="42"></PersonComponent>
+    <PersonComponent :fatherMsg="fatherMsg" :fatherNumber="42" v-model="ifShow">
+      <template v-slot:header><p>Something good happened.</p></template>
+      <template v-slot:footer><span>we are always better</span></template>
+    </PersonComponent>
   </div>
 </template>
 
@@ -16,30 +19,30 @@ export default {
   data() {
     return {
       fatherMsg: [
-          {
-              id:1,
-              name:"father1"
-          },
-          {
-              id:2,
-              name:"father2"
-          }
+        {
+          id: 1,
+          name: "father1"
+        },
+        {
+          id: 2,
+          name: "father2"
+        }
       ],
-    
-    //prop 传入一个数字：
-    fatherNumber:42,
 
+      //prop 传入一个数字：
+      fatherNumber: 42,
+      ifShow: false,
       response: ""
     };
-  },
-//   created() {
-//     let _this = this;
-//     axios
-//       .post("http://yapi.demo.qunar.com/mock/82322/mock0239/test/test")
-//       .then(function(res) {
-//         console.log(res);
-//       });
-//   }
+  }
+  //   created() {
+  //     let _this = this;
+  //     axios
+  //       .post("http://yapi.demo.qunar.com/mock/82322/mock0239/test/test")
+  //       .then(function(res) {
+  //         console.log(res);
+  //       });
+  //   }
 };
 </script>
 
