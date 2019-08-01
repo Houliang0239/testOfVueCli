@@ -3,7 +3,9 @@
     <!-- <button v-for="(person,index) in personMsg" :key="index">
             {{person.id}}+{{person.name}}
     </button>-->
-    <SonComponent :personMsg="personMsg"></SonComponent>
+    <slot name="header"></slot>
+    <slot name="footer"></slot>
+    <SonComponent :personMsg="personMsg" noprops="false" @getSon="getSon"></SonComponent>
   </div>
 </template>
 
@@ -11,9 +13,9 @@
 import SonComponent from "../components/SonComponent";
 export default {
   name: "PersonComponent",
-  props:{
-      fatherNumber:Number,   
-      fatherMsg:null,
+  props: {
+    fatherNumber: Number,
+    fatherMsg: null
   },
   components: {
     SonComponent
@@ -24,7 +26,12 @@ export default {
     };
   },
   mounted() {
-    console.log('fatherNumber的类型是'+typeof this.fatherNumber);
+    // console.log("fatherNumber的类型是" + typeof this.fatherNumber);
+  },
+  methods: {
+    getSon(val) {
+      console.log(val);
+    }
   }
 };
 </script>
