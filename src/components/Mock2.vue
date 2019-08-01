@@ -9,10 +9,13 @@ export default {
     data(){
         return {
             dataShow:[],
+            params:'',
+            test: new URLSearchParams() 
         }
     },
     created () {
         this.getData()
+        console.log(this.test)
     },
     methods:{
         getData(){

@@ -32,14 +32,20 @@ export default {
       response: ""
     };
   },
-//   created() {
-//     let _this = this;
-//     axios
-//       .post("http://yapi.demo.qunar.com/mock/82322/mock0239/test/test")
-//       .then(function(res) {
-//         console.log(res);
-//       });
-//   }
+  created() {
+    let _this = this;
+    axios
+      .get("http://yapi.demo.qunar.com/mock/82322/mock0239/test/test")
+      .then(function(res) {
+        console.log(res);
+      });
+
+    axios.post('http://yapi.demo.qunar.com/mock/82322/mock0239/test/test',{
+      require:'123456789'
+    }).then(function(res){
+      console.log(res);
+    })
+  }
 };
 </script>
 
