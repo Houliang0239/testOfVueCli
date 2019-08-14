@@ -43,7 +43,7 @@ export default {
       }
       else if(e.toElement.innerText==this.keys[15]){
         try  {
-          this.result = eval(this.enter).toFixed(6);
+          this.result = eval(this.enter).toFixed(2);
           console.log(window.innerHeight)
         }
         catch(exception) {
