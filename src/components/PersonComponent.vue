@@ -5,6 +5,7 @@
     </button>-->
     <slot name="header"></slot>
     <slot name="footer"></slot>
+    1111
     <SonComponent :personMsg="personMsg" noprops="false" @getSon="getSon"></SonComponent>
   </div>
 </template>
